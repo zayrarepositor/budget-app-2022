@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
-import "react-circular-progressbar/dist/styles.css";
+
 import { currencyFormatter } from "../helpers";
 
 const Tracker = ({ budget, expenses, setBudget, setExpenses, setValid }) => {
@@ -32,35 +31,43 @@ const Tracker = ({ budget, expenses, setBudget, setExpenses, setValid }) => {
     }
   };
 
+  const divStyle = {
+    width: `${percentage}%`,
+  };
+
   return (
-    <div className="logger-container shadow container columns">
-      <div>
-        <CircularProgressbar
-          value={percentage}
-          styles={buildStyles({
-            pathColor: percentage > 100 ? "#b91c1c" : "#f58320d5",
-            textColor: percentage > 100 ? "#b91c1c" : "#2a8b5d",
-            trailColor: "#666666",
-          })}
-          text={`${percentage}% spent`}
-        />
-      </div>
+    <div className="logger-container shadow container">
       <div className="expenses">
-        <button className="reset-app" type="button" onClick={handleReset}>
-          Reset App
-        </button>
         <p>
-          <span>Total: </span>
+          <span>Budget: </span>
           {currencyFormatter(budget)}
         </p>
+        <p className={`${available < 0 ? "negative" : ""}`}>
+          <span>Spent: </span>
+          {currencyFormatter(spent)}
+        </p>
+        <div className="progress-bar-div">
+          <div className="progress-bar">
+            <div
+              className={`progress ${
+                percentage > 95 ? "negative" : percentage > 50 ? "medium" : ""
+              }`}
+              style={divStyle}></div>
+          </div>
+          <span
+            className={`${
+              percentage > 95 ? "negative" : ""
+            }`}>{`${percentage}%`}</span>
+        </div>
+
         <p className={`${available < 0 ? "negative" : ""}`}>
           <span>Available: </span>
           {currencyFormatter(available)}
         </p>
-        <p>
-          <span>Spent: </span>
-          {currencyFormatter(spent)}
-        </p>
+
+        <button className="reset-app" type="button" onClick={handleReset}>
+          Reset App
+        </button>
       </div>
     </div>
   );

@@ -194,8 +194,6 @@ p {
   color: var(--orange);
   font-size: 2.4rem;
   text-transform: uppercase;
-  /*   line-height: 2.15;
- */
 }
 
 .form input[type="text"],
@@ -286,7 +284,21 @@ p {
 
 .columns :first-child {
   margin-bottom: 4rem;
+}
 
+.progress-bar {
+  width: 350px;
+  height: 10px;
+  background-color: var(--gray);
+  margin: 1rem auto;
+  border-radius: 30px;
+}
+
+.progress {
+  height: 100%;
+  background-color: var(--light-green);
+  border-radius: 30px;
+  transition: background-color 500ms ease;
 }
 
 .form input[type="text"].logger-new-input,
@@ -298,7 +310,7 @@ p {
 
 .expenses {
   width: 100%;
-  line-height: 1.2;
+  line-height: 1.8;
   text-align: center;
 }
 
@@ -308,6 +320,15 @@ p {
   color: var(--green);
 }
 
+.progress.negative {
+  background-color: var(--red);
+}
+
+.progress.medium {
+  background-color: var(--orange);
+}
+
+.progress-bar-div span.negative,
 .expenses p.negative,
 .expenses p.negative span {
   color: var(--red);
@@ -324,6 +345,7 @@ p {
   border: none;
   background-color: var(--gray);
   padding: 1rem;
+  margin-top: 3rem;
   width: 100%;
   max-width: 306px;
   text-align: center;
@@ -375,9 +397,6 @@ main {
 
 .expenses-list {
   margin-top: 5rem;
-  /*   padding-left: 15rem;
-  padding-right: 15rem;
- */
 }
 
 .expenses-list h2 {
@@ -462,7 +481,6 @@ main {
   right: 5rem;
   text-align: right;
   width: fit-content;
-  /*  transition: all 500ms ease-out; */
 }
 
 .add-expense figure {
@@ -472,15 +490,8 @@ main {
 
 .add-expense img {
   width: 6rem;
-  /*   transition: all 500ms ease-out;
- */
 }
 
-/* 
-.about-img img {
-  transition: all 500ms ease-out;
-}
- */
 .add-text {
   visibility: hidden;
   width: fit-content;
@@ -528,8 +539,6 @@ main {
 
 .modal .form,
 .modal .about {
-  /*   max-width: 80rem;
-  width: 60rem; */
   transition-property: all;
   transition-duration: 300ms;
   transition-timing-function: ease-in;
@@ -592,10 +601,6 @@ body .about {
   justify-content: center;
   align-items: center;
   font-size: 2.4rem;
-  /*   text-align: right;
- */
-  /*   background-color: var(--orange);
- */
   text-align: right;
 }
 
@@ -684,15 +689,10 @@ body .about {
     margin-bottom: 0;
   }
 
-  .expenses p {
-    text-align: left;
-  }
-
   .filters {
     padding-left: 15rem;
     padding-right: 15rem;
   }
-
 }
 
 @media (min-width: 978px) {
