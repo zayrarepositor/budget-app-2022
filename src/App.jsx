@@ -6,6 +6,8 @@ import Expenses from "./components/Expenses";
 import { idGenerator } from "./helpers";
 import addImg from "./img/icons8-más-48.png";
 import Filters from "./components/Filters";
+import { Profile } from "./components/Profile";
+import { LogoutButton } from "./components/Logout";
 
 function App() {
   const [budget, setBudget] = useState(
@@ -142,6 +144,7 @@ function App() {
           setAbout={setAbout}
         />
       )}
+      <Profile />
     </div>
   );
 }

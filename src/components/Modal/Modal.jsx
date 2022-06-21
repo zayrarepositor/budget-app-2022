@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+
 import Message from "../Message.jsx";
 import closeImg from "./img/icons8-eliminar.svg";
 
@@ -17,6 +18,7 @@ const Modal = ({
   const [category, setCategory] = useState("");
   const [errors, setErrors] = useState("");
   const [id, setId] = useState("");
+  const { user, isAuthenticated, isLoading } = useAuth0();
 
   useEffect(() => {
     if (Object.keys(expenseToEdit).length > 0) {
@@ -57,6 +59,7 @@ const Modal = ({
       <div className="close-modal">
         <img src={closeImg} alt="..." onClick={closeModal} />
       </div>
+
       {about ? (
         <div className={`about ${modalAnimation ? "show" : "close"}`}>
           <h3>about the project</h3>
