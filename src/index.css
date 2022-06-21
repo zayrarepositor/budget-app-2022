@@ -50,6 +50,7 @@ p {
 .header {
   text-align: center;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   font-size: 1.9rem;
   margin: 3rem 2rem;
@@ -75,7 +76,6 @@ p {
 
 .header-button {
   display: flow-root;
-  margin: auto;
   text-align: center;
   max-width: 148px;
 }

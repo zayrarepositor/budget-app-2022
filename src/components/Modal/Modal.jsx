@@ -18,7 +18,6 @@ const Modal = ({
   const [category, setCategory] = useState("");
   const [errors, setErrors] = useState("");
   const [id, setId] = useState("");
-  const { user, isAuthenticated, isLoading } = useAuth0();
 
   useEffect(() => {
     if (Object.keys(expenseToEdit).length > 0) {
