@@ -15,7 +15,7 @@ small front project - vite/css
 
 ✉ Contact info:
 
-    linkedIn ☞ https://www.linkedin.com/in/zayra-velasco-5bb934141
+    linkedIn ☞ https://www.linkedin.com/in/zayra-velasco
     mail ☞ zayra.contacto@gmail.com
 
 Good Life! ( ͡~ ͜ʖ ͡°)
