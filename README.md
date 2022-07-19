@@ -5,9 +5,13 @@ small front project - vite/css
 
 ☞ https://rad-pothos-ce687f.netlify.app/
 
-☑ Budget App was thought as a helper for expenses register and track.
+☑ Budget App was thought as a helper for expenses register and track. Once you set a budget, you can create, edit, delete and filter the expenses.
 
-✎Next update: Sign in
+☑ Auth0 login
+
+☢ You could check out a video demo here ☞ https://youtu.be/E9mpdyUiKd8
+
+✎ Next update: backend
 
 ✉ Contact info:
 
