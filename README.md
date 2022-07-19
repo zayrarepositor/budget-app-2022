@@ -3,6 +3,8 @@ small front project - vite/css
 
 ❤ Hey! Here developer Zayra, and a small project, in progress, with vite and css.
 
+☞ https://rad-pothos-ce687f.netlify.app/
+
 ☑ Budget App was thought as a helper for expenses register and track.
 
 ✎Next update: Sign in
